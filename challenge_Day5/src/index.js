@@ -13,7 +13,7 @@ resultMent.appendChild(H2);
 button.addEventListener("click",event => {
     event.preventDefault();
     
-    const ranNum = Math.ceil(Math.random() * parseInt(maxNum.value));
+    const ranNum = Math.ceil(Math.random() * parseInt(maxNum.innerHTML));
     H3.innerText = `You chose: ${parseInt(selectNum.value)}, the machine chose: ${parseInt(ranNum)}.`;
    
     if(parseInt(selectNum.value) == ranNum){
