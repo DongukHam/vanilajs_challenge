@@ -1,25 +1,39 @@
-const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
-
-// document.creatElement("h2");
-document.body.appendChild("h2");
-
-const windowWidth = window.innerWidth;
-const widthFirst = windowWidth * 0.8;
-const widthSecond = windowWidth * 0.5;
-
+const BODY = document.querySelector("body");
+const H2 = document.createElement("h2");
+H2.innerText = "Hello!";
+BODY.appendChild(H2);
 
 function bgColorChange() {
-  if(windowWidth > widthFirst){
-    document.body.h2.classList.add("main");
-  } else if(windowWidth <= widthFirst && windowWidth > widthSecond){
-    // document.body.h2.classList.remove();
-    document.body.h2.classList.add("mid");
-  } else {
-    document.body.h2.classList.add("last");    
+  const windowWidth = window.innerWidth;
+  const WIDE = "wide";
+  const MEDIUM = "medium";
+  const SHORT = "short";
+  if (windowWidth > 800) {
+    // BODY.className = WIDE;
+
+    BODY.classList.add(WIDE);
+    BODY.classList.remove(MEDIUM);
+    BODY.classList.remove(SHORT);
+  } else if (windowWidth <= 800 && windowWidth > 600) {
+    // BODY.className = MEDIUM;
+    BODY.classList.add(MEDIUM);
+    BODY.classList.remove(WIDE);
+    BODY.classList.remove(SHORT);
+  } else if (windowWidth < 600) {
+    // BODY.className = SHORT;
+    BODY.classList.add(SHORT);
+    BODY.classList.remove(WIDE);
+    BODY.classList.remove(MEDIUM);
   }
+}
+
+bgColorChange();
+window.onresize = function () {
+  bgColorChange();
 };
 
+// window.addEventListener("resize", bgColorChange);
 
-
-    
-// document.body.style.backgroundColor = colors[Math.floor(Math.random,() * colors.length)];
+// window.onresize = function(event){
+//   bgColorChange();
+// }

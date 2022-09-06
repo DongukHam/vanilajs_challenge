@@ -2,4 +2,29 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top:20px;
+}
+
+
+.insertInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+}
+
+.insertInfo>h3, .insertInfo>form {
+    margin: 0;
+    padding: 0;
+}
+
+.maxNumber, .inputNumber {
+    margin-left: 5px;
+}
+
+.resultMent, .resultMent h2, .resultMent h3{
+    margin:0;
+    padding:0;
 }

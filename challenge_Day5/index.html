@@ -9,10 +9,21 @@
   <body>
     <h1 id="title">Random Number Game</h1>
     <div class="targetSetting">
-        <h3>Generate a number between 0 and</h3>
+        <h2>Generate a number between 0 and </h2>
         <form class="maxNumber">
-            <input type="text" placeholder="input a number">
+            <input type="number" placeholder="Choose the Max number" required>
         </form>
+    </div>
+
+    <div class="insertNumber">
+        <span class="insertInfo">
+            <h3>Guess the number: </h3>
+            <form class="inputNumber">
+                <input type="number" placeholder="What is your number?" required>
+                <button>Play!</button>
+            </form>
+        </span>
+        <span class="resultMent"></span>
     </div>
     <script src="src/index.js"></script>
   </body>

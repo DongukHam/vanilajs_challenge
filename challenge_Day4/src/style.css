@@ -1,8 +1,21 @@
-body {
-    font-family: sans-serif;
-  }
-  
+/* const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"]; */
 
-  .main {
-    background-color:  #1abc9c;
-  }
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  color: white;
+}
+
+.wide {
+  background-color: #1abc9c;
+}
+
+.medium {
+  background-color: #3498db;
+}
+
+.short {
+  background-color: #9b59b6;
+}
