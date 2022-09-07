@@ -21,6 +21,6 @@ button.addEventListener("click",event => {
     } else {
         H2.innerText = "You Lost!";}
     });
-    
 
-console.log(document)
+
+    // a === b ? contents : contents
