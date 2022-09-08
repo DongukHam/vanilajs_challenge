@@ -22,15 +22,16 @@ const colors = [
   const body = document.querySelector("body");
   const button = document.querySelector("body button");
 
-
   function colorGradient(event) {
     event.preventDefault();
-    //const newColors = [];
-    const colFir = colors[Math.floor(Math.random() * colors.length)];
-    const colSec = colors[Math.floor(Math.random() * colors.length)];
-  
-    // newColors = colors;
-    body.style.backgroundImage = `linear-gradient(${colFir}, ${colSec})`;
+    const newColors = [].concat(colors);
+    const colFir = newColors[Math.floor(Math.random() * newColors.length)];
+    const colFirIndex = newColors.indexOf(colFir);
+    newColors.splice(colFirIndex,1);
+    const colSec = newColors[Math.floor(Math.random() * newColors.length)];
+    const deg = 90;
+    body.style.backgroundImage = `linear-gradient(${deg}deg,${colFir}, ${colSec})`;
+
   };
 
 button.addEventListener("click", colorGradient);
