@@ -1,0 +1,17 @@
+body{
+    background-color: beige; 
+}
+
+#login-join{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#login-join>input {
+    width:200px;
+    margin-top:5px;
+
+}
