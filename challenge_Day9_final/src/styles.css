@@ -3,7 +3,6 @@ body{
 }
 
 #login-join{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -14,4 +13,29 @@ body{
     width:200px;
     margin-top:5px;
 
+}
+
+.hidden {
+    display: none;
+}
+
+
+#clock{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#greeting {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#todo-form {
+    display:flex;
+    justify-content: center;
+    text-align: center;
 }
