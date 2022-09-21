@@ -15,6 +15,13 @@ body{
 
 }
 
+#idpw-form {
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+
 .hidden {
     display: none;
 }
