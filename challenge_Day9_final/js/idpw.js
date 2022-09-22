@@ -1,18 +1,20 @@
-const idInput = document.querySelector("#idpw-form input:first-child");
-const pwInput = document.querySelector("#idpw-form input:nth-child(2)");
+
+const idInput = document.querySelector("#idpw-form .id");
+const pwInput = document.querySelector("#idpw-form .password");
 const submitButton = document.querySelector("#idpw-form input:last-child");
 
 
 const USER_key = "username";
 const USER_value = "password";
 
-function idpwHandler() {
-    // event.preventDefault();
-    // const username = document.querySelector("#idpw-form input:first-child").value;
+function idpwHandler(event) {
+    event.preventDefault();
+    const username = idInput.value;
     // const password = pwInput.value;
-    localStorage.setItem(USER_key, idInput.value);
+    localStorage.setItem(USER_key, username);
         // localStorage.setItem(USER_value, password);
     greetingHandler(username);
+    username= " ";
 };
 
 submitButton.addEventListener("submit", idpwHandler);
@@ -20,18 +22,19 @@ submitButton.addEventListener("submit", idpwHandler);
 const greeting = document.querySelector("#greeting");
 
 function greetingHandler(username) {
+    LoginJoin.classList.add(HIDDEN_CLASSNAME);
+    IdPw.classList.add(HIDDEN_CLASSNAME);
     greeting.innerHTML = `Hello ${username}`;
-}
+};
 
 const savedUsername = localStorage.getItem(USER_key);
 
 if(savedUsername === null) {
-    IdPw.classList.add(HIDDEN_CLASSNAME);
-    IdPw.addEventListener("submit", idpwHandler);
+    LoginJoin.classList.add(HIDDEN_CLASSNAME);
+    IdPw.classList.remove(HIDDEN_CLASSNAME);
 }else{
     greetingHandler(savedUsername);
-
-}
+};
 
 // function paintGreetings(username) {
 //     greeting.innerHTML = `Hello ${username}`;
