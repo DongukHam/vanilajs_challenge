@@ -12,10 +12,3 @@ function buttonHandler(event) {
 LoginJoin.addEventListener("submit", buttonHandler);
 
 
-
-// const joinButton = document.querySelector("#idpw-form input:last-child");
-
-// function buttonValue() {
-//     joinButton.innerHTML = ""
-
-// }
