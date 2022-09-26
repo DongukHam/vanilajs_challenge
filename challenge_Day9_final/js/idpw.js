@@ -21,6 +21,8 @@ IdPw.addEventListener("submit", idpwHandler);
 
 const greeting = document.querySelector("#greeting");
 
+idpw = [];
+
 function greetingHandler(username) {
     LoginJoin.classList.add(HIDDEN_CLASSNAME);
     IdPw.classList.add(HIDDEN_CLASSNAME);
