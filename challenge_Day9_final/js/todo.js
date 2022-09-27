@@ -7,7 +7,7 @@ const TODOS_KEY = "todos";
 let toDos = [];
 
 function saveTodos() {
-    localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function deleteTodos(event) {
@@ -36,6 +36,7 @@ function handletodoSubmit(event){
     event.preventDefault();
     const newtodo = todoInput.value;
     todoInput.value = "";
+    // initialize the value of todoInput
     const newTodoObj = {
         text:newtodo,
         id: Date.now(),
