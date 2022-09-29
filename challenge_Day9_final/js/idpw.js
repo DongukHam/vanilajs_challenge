@@ -19,7 +19,7 @@ function deleteUser() {
     window.location.reload()
 };
 
-function idpwHandler(event) {
+function idpwHandler() {
     localStorage.setItem(USER_INFO, JSON.stringify(idpw));
 };
 
@@ -30,7 +30,7 @@ const greeting = document.querySelector("#greeting");
 function greetingHandler(username) {
         LoginJoin.classList.add(HIDDEN_CLASSNAME);
         IdPw.classList.add(HIDDEN_CLASSNAME);
-        greeting.innerHTML = `Hello ${USER_INFO.id}`;
+        greeting.innerHTML = `Hello ${username}`;
         const button = document.createElement("button");
         button.innerHTML = "Logout"
         button.style.marginLeft = "15px";
@@ -39,8 +39,11 @@ function greetingHandler(username) {
         console.log("실행완료")
     };
     
-function submithandler(){
-    const username = idInput.value;
+function submithandler(event){
+    event.preventDefault();
+    const savedInfo = localStorage.getItem(USER_INFO);
+    const username = savedInfo.id;
+    console.log(username);
     const newIdPw = {
         id: idInput.value,
         password: pwInput.value,
