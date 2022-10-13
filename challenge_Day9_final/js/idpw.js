@@ -20,6 +20,17 @@ function deleteUser() {
 };
 
 function idpwHandler() {
+    // const username = localStorage.getItem(USER_key);
+    // const username = savedInfo.id;
+    // console.log(username);
+    const newIdPw = {
+        id: idInput.value,
+        password: pwInput.value,
+    };
+    console.log(idInput.value);
+    const username = idInput.value;
+    idpw.push(newIdPw);
+    greetingHandler(username);
     localStorage.setItem(USER_INFO, JSON.stringify(idpw));
 };
 
@@ -41,19 +52,15 @@ function greetingHandler(username) {
     
 function submithandler(event){
     event.preventDefault();
-    const savedInfo = localStorage.getItem(USER_INFO);
-    const username = savedInfo.id;
-    console.log(username);
-    const newIdPw = {
-        id: idInput.value,
-        password: pwInput.value,
-    };
-    idpw.push(newIdPw);
-    idpwHandler()
-    greetingHandler(username);
+    idpwHandler();
 };
 
 IdPw.addEventListener("submit", submithandler);
+
+
+function idMatching(){
+    
+};
 
 
 
