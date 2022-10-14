@@ -47,3 +47,22 @@ body{
     justify-content: center;
     text-align: center;
 }
+
+#todo-list {
+    margin-top: 50px;;
+    display: flex;
+    justify-content: center;
+}
+
+#quote {
+    margin-top:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    text-align: center;
+}
+
+#quote > span:last-child {
+    margin-top:20px;
+};
